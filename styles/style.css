@@ -1,0 +1,610 @@
+* {
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    
+}
+body {
+    animation: fadein 2s; 
+    background: #edeee1;
+padding: 1%;
+}
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+        opacity:1;
+    }
+}
+.title {
+    text-align: center;
+    padding: 15%;
+    font-size: 300%;
+}
+:root {
+    --bg: #ffffff;
+    --color: #222222;
+
+}
+
+.wrapper {
+    padding: 1.5rem 0;
+    filter: url('#goo');
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+
+    font-size: 1.25rem;
+}
+
+.button:before,
+.button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: var(--color);
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+    transform: none;
+}
+
+
+
+/*** ESTILOS BOTÓN SLIDE LEFT ***/
+.ov-btn-slide-left {
+    background: #fff; /* color de fondo */
+    color: #000000; /* color de fuente */
+    border: 2px solid #000000; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .ov-btn-slide-left:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .ov-btn-slide-left::after {
+    content: "";
+    background: #000000; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .ov-btn-slide-left:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+  .container .card
+{
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover
+{
+    height: 530px;
+}
+.container .card .imgContainer
+{
+    position: relative;
+    width:250px;
+    height:250px;
+    top:-50px;
+    left:10px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.container .card .imgContainer img
+{
+    max-width: 100%;
+    border-radius: 4px;
+}
+.container .card .content
+{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover .content
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+@media (max-width: 330px){
+    .container .card .imgContainer{
+        left: -2px;
+    }
+}
+.heading{
+    font-size:20px;
+    font-weight:600;
+    color:#3D5AFE;
+
+}
+
+  .line1{
+    color:#000;
+    font-size:12px;
+
+  }
+   .line2{
+    color:#000;
+    font-size:12px;
+    
+  }
+   .line3{
+    color:#000;
+    font-size:12px;
+    
+  }
+
+  .cards{
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+    
+
+  }
+    
+
+
+.cards:hover{
+
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.1);
+}
+
+.hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+  }
+  
+  .hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+  }
+  
+  .hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  
+  .hover-content {
+    position: relative;
+    z-index: 99;
+  }
+  
+  
+  /* DEMO 1 ============================== */
+  .hover-1 img {
+    width: 105%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+  }
+  
+  .hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+  }
+  
+  .hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+  }
+  
+  .hover-1:hover .hover-1-content {
+    bottom: 2rem;
+  }
+  
+  .hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-1:hover img {
+    left: 0;
+  }
+  
+  .hover-1:hover .hover-overlay {
+    opacity: 0;
+  }
+  
+  
+  /* DEMO 2 ============================== */
+  .hover-2 .hover-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+  }
+  
+  .hover-2-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.3s;
+  }
+  
+  .hover-2-description {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    text-align: center;
+    z-index: 99;
+    transition: all 0.3s;
+  }
+  
+  .hover-2:hover .hover-2-title {
+    transform: translateY(-1.5rem);
+  }
+  
+  .hover-2:hover .hover-2-description {
+    bottom: 0.5rem;
+    opacity: 1;
+  }
+  
+  .hover-2:hover .hover-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+  }
+  
+  
+  /* DEMO 3 ============================== */
+  .hover-3::after {
+    content: '';
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    border: 1px solid #fff;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 90;
+    transition: all 0.3s;
+    transform: scale(1.1);
+    opacity: 0;
+    display: block;
+    opacity: 0;
+  }
+  
+  .hover-3-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 99;
+  }
+  
+  .hover-3-description {
+    opacity: 0;
+    transform: scale(1.3);
+    transition: all 0.3s;
+  }
+  
+  .hover-3 img {
+    width: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hover-3 .hover-overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .hover-3:hover img {
+    width: 100%;
+  }
+  
+  .hover-3:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-3:hover .hover-3-description {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-3:hover .hover-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  /* DEMO 4 ============================== */
+  .hover-4 img {
+    width: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hover-4 .hover-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+  }
+  
+  .hover-4-title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3rem;
+    z-index: 99;
+  }
+  
+  .hover-4-description {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-align: right;
+    border-right: 3px solid #fff;
+    padding: 0 1rem;
+    z-index: 99;
+    transform: translateX(-1.5rem);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  @media (min-width: 992px) {
+    .hover-4-description {
+      width: 50%;
+    }
+  }
+  
+  .hover-4:hover img {
+    width: 100%;
+  }
+  
+  .hover-4:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-4:hover .hover-4-description {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-4:hover .hover-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  /* DEMO 5 ============================== */
+  .hover-5::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: #47c650;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    transition: all 0.3s;
+    z-index: 999;
+  }
+  
+  .hover-5 .hover-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hover-5-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    transition: all 0.3s;
+    padding: 2rem 3rem;
+    z-index: 99;
+  }
+  
+  .hover-5-title span {
+    transition: all 0.4s;
+    opacity: 0;
+    color: #47c650;
+  }
+  
+  .hover-5:hover .hover-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .hover-5:hover .hover-5-title {
+    bottom: 0;
+  }
+  
+  .hover-5:hover .hover-5-title span {
+    opacity: 1;
+  }
+  
+  .hover-5:hover::after {
+    bottom: 0;
+  }
+  
+  /*
+  *
+  * ==========================================
+  * FOR DEMO PURPOSES
+  * ==========================================
+  *
+  */
+  .brig {
+    filter: brightness(50%);    
+    
+            }
+        
+            .container {
+            
+            }
+            
+            .card2 {
+                width: 220px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px px;
+                position: relative;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+            }
+            
+            .card2 .fas.fa-arrow-right {
+                position: absolute;
+                bottom: -100px;
+                background-color: #000000;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: gold;
+                opacity: 0;
+                transform: translateY(50%);
+                transition: all 0.5s ease;
+            }
+            
+            .card2:hover .fas.fa-arrow-right {
+                bottom: 0px;
+                opacity: 1;
+            }
+            
+            .card2 .bi bi-book-half {
+                font-size: 40px;
+                background-color: #0000000d;
+                height: 100px;
+                width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #000000;
+            }
+            
+            .card2 .h4 {
+                font-weight: 700;
+            }
+            
+            .container2 .content {
+                max-width: 30px;
+            }
+            
+            .containe2r .content .h-6 {
+                color: #4e9525;
+                font-weight: 600;
+            }
+            
+            .container2 .content .btn.btn-primary {
+                padding: 15px;
+                background-color: #4e9525;
+                color: white;
+                border-radius: 0px;
+                border: none;
+                box-shadow: none;
+            }
+            
+            .card2:hover .fab.fa-envira,
+            .card2:hover .fas.fa-cut,
+            .card2:hover .fas.fa-people-carry {
+                color: gold;
+                background-color: #4e9525;
+            }
+            
+            @media (max-width:990px) {
+                .container .content {
+                    max-width: 100%;
+                }
+            }
+            
+            @media (max-width:500px) {
+                body {
+                    padding: 25px;
+                }
+            
+                .card2 {
+                    width: 100%;
+                }
+            
+                .content {
+                    padding: 25px;
+                }
+            }
